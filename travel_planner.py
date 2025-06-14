@@ -26,14 +26,14 @@ if st.button("Generate Itinerary"):
         st.write("✓ Research completed")
     
     with st.spinner("Creating your personalized itinerary..."):
-            # Pass research results to planner
-            prompt = f"""
-            Destination: {destination}
-            Duration: {num_days} days
-            Research Results: {research_results}
-            
-            Please create a detailed itinerary based on this research.
-            """
-            travel_itinerary_response=travel_planner(st.session_state.session_id,prompt)
-            st.write(travel_itinerary_response)    
+        # Pass research results to planner
+        prompt = f"""
+        Destination: {destination}
+        Duration: {num_days} days
+        Research Results: {research_results}
+        
+        Please create a detailed itinerary based on this research.
+        """
+        travel_itinerary_response=travel_planner(st.session_state.session_id,prompt)
+        st.write(travel_itinerary_response)    
     
